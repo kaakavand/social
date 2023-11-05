@@ -108,10 +108,10 @@ background-color: #c98416 !important;
 
 .bg_light_mod .muirtl-1vxvp5a-MuiPaper-root-MuiDrawer-paper{
     background-image: none !important;
-    background-color: #fff !important;
+    /* background-color: #fff !important; */
 }
 
 .bg_dark_mod .muirtl-1vxvp5a-MuiPaper-root-MuiDrawer-paper{
     background-image: none !important;
-background-color: #151B25 !important;
+/* background-color: #151B25 !important; */
 }

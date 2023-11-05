@@ -92,6 +92,7 @@ const Layout = ({
                 onClose={toggleDrawer("right", false)}
                 className={theme.palette.mode === "dark" ? "bg_dark_mod" : "bg_light_mod"}
                 sx={{
+                  background :theme.palette.mode === "dark" ? "#151B25" : "#fff",
                   position: "relative",
                   borderRadius: "15px",
                   overflow: "initial",
