@@ -87,7 +87,7 @@ const SocialList = ({ list, reload, editHandler }: {reload : Function , editHand
                       sx={{
                         color:
                           theme.palette.mode === "dark"
-                            ? theme.palette.warning.main
+                            ? '#fff'
                             : "#212121",
                       }}
                     >

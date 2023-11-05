@@ -16,7 +16,13 @@ import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 const profileImage = require("./../assets/images/profile.jpg");
 const iranImage = require("./../assets/images/Flag-Iran.webp");
 
-const Layout = ({ children, themeChenge }: {children : ReactJSXElement, themeChenge : Function}) => {
+const Layout = ({
+  children,
+  themeChenge,
+}: {
+  children: ReactJSXElement;
+  themeChenge: Function;
+}) => {
   const [thmeState, setThemeState] = useState<"dark" | "light">("dark");
   const theme = createTheme({
     palette: {
@@ -61,8 +67,18 @@ const Layout = ({ children, themeChenge }: {children : ReactJSXElement, themeChe
     <>
       <CacheProvider value={cacheRtl}>
         <ThemeProvider theme={theme}>
-          <Box display={"flex"} justifyContent={'space-between'} padding={2} alignItems={'center'} sx={{background: theme.palette.mode === "dark" ? "#151B25" : "#fff",}}>
-            <SearchIcon sx={{color: theme.palette.mode === "dark" ? "#fff" : "#151B25",}}/>
+          <Box
+            display={"flex"}
+            justifyContent={"space-between"}
+            padding={2}
+            alignItems={"center"}
+            sx={{
+              background: theme.palette.mode === "dark" ? "#151B25" : "#fff",
+            }}
+          >
+            <SearchIcon
+              sx={{ color: theme.palette.mode === "dark" ? "#fff" : "#151B25" }}
+            />
             <header className="header">
               <img className="lang" src={iranImage} alt="language" />
               <img src={profileImage} alt="profile" />
@@ -74,6 +90,7 @@ const Layout = ({ children, themeChenge }: {children : ReactJSXElement, themeChe
                 anchor={"right"}
                 open={state.right}
                 onClose={toggleDrawer("right", false)}
+                className={theme.palette.mode === "dark" ? "bg_dark_mod" : "bg_light_mod"}
                 sx={{
                   position: "relative",
                   borderRadius: "15px",
@@ -112,7 +129,7 @@ const Layout = ({ children, themeChenge }: {children : ReactJSXElement, themeChe
                 )}
 
                 <DarkModeMenu
-                  changTheme={(value: 'dark' | 'light') => {
+                  changTheme={(value: "dark" | "light") => {
                     setThemeState(value);
                     themeChenge(value);
                   }}
